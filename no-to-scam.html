@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Safety against common Scams - Cardano Community managed support documentations</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html">Home</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="wallets.html">Wallets</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="wallets.html">Wallet basics in Cardano</a></li><li class="chapter-item "><a href="Wallets/types.html">Types of Wallets</a></li><li class="chapter-item "><a href="Wallets/list.html">List of Wallets</a></li><li class="chapter-item "><a href="Wallets/yoroi.html">Yoroi</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Wallets/Yoroi/install.html">Install/Uninstall</a></li><li class="chapter-item "><a href="Wallets/Yoroi/create.html">Create a new Wallet</a></li><li class="chapter-item "><a href="Wallets/Yoroi/transfer.html">Transfer Daedalus Wallet to Yoroi</a></li><li class="chapter-item "><a href="Wallets/Yoroi/restore.html">Restore an existing Wallet</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="explorers.html">List of Explorers</a></li><li class="chapter-item expanded "><a href="no-to-scam.html" class="active">Safety against common Scams</a></li></ol></li><li class="chapter-item expanded "><a href="index.html">Not Started yet</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="wallets.html">Wallets</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Wallets/daedalus.html">Daedalus</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Wallets/Daedalus/versions.html">Versions and Platforms</a></li><li class="chapter-item "><a href="Wallets/Daedalus/install.html">How to Install/Upgrade</a></li><li class="chapter-item "><a href="Wallets/Daedalus/create.html">Create a new Wallet</a></li><li class="chapter-item "><a href="Wallets/Daedalus/restore.html">Restore an existing Wallet</a></li><li class="chapter-item "><a href="Wallets/Daedalus/delegate.html">Delegating to a pool</a></li><li class="chapter-item "><a href="Wallets/Daedalus/upgrade.html">Upgrading Daedalus wallet</a></li><li class="chapter-item "><a href="Wallets/Daedalus/issues.html">Queries/Known Issues</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Wallets/Daedalus/issues.html">Access Denied during install</a></li><li class="chapter-item "><a href="Wallets/Daedalus/issues.html">An error occurred while sending funds</a></li><li class="chapter-item "><a href="Wallets/Daedalus/issues.html">Cardano Node Crashed upon launch</a></li><li class="chapter-item "><a href="Wallets/Daedalus/issues.html">CPU Utilisation too high</a></li></ol></li></ol></li><li class="chapter-item "><a href="Wallets/yoroi.html">Yoroi</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Wallets/Yoroi/versions.html">Versions and Platforms</a></li><li class="chapter-item "><a href="Wallets/Yoroi/ledger.html">Integration with Ledger</a></li><li class="chapter-item "><a href="Wallets/Yoroi/issues.html">Queries/Known Issues</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Wallets/Yoroi/issues.html">Ledger connection stuck on &quot;waiting for Commands..&quot;</a></li><li class="chapter-item "><a href="Wallets/Yoroi/resync.html">Balance is incorrect in Yoroi interface</a></li><li class="chapter-item "><a href="Wallets/Yoroi/firefox.html">Firefox does not list Yoroi</a></li><li class="chapter-item "><a href="Wallets/Yoroi/workarounds.html">Emergency Workarounds</a></li></ol></li></ol></li></ol></li><li class="chapter-item expanded "><a href="community-contrib.html">Other Community Contributions</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Community/pooltool.html">Pooltool</a></li><li class="chapter-item "><a href="Community/cntools.html">CNTools</a></li><li class="chapter-item "><a href="Community/rewardsbot.html">Rewards Bot</a></li><li class="chapter-item "><a href="Community/wiki.html">Community Hosted Wiki</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Community/wiki.html">Mind Map of cardano components</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="index.html">Appendix</a></li><li class="chapter-item expanded "><a href="Contributors.html">Contributors</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                        </ul>
+                    </div>
+
+                    <h1 class="menu-title">Cardano Community managed support documentations</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="https://github.com/cardano-community/support-faq/blob/master/docs/no-to-scam.md" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2><a class="header" href="#how-to-identify-a-scam" id="how-to-identify-a-scam">How to identify a SCAM</a></h2>
+<p>We commonly come across users losing their moneys to various giveaways or impersonators. Being in a decentralised cryptocurrency means you as an individual are your own bank, and only you are responsible for protecting your funds.
+If you fall for any of these and you giveaway funds or share your private keys, <strong>nobody</strong> can recover your funds. Do your due diligence when operating your crypto, just as you would when operating fiat currency notes.
+Also, if you come across such a scam, please forward the messages or group information to <a href="https://t.me/CardanoReportToAdmin">Cardano Report To Admin</a> group on telegram.
+Note to telegram users, we cannot do much if you forward a screenshot, please ensure you select the message from the scammer and <code>forward</code> it to group mentioned above.</p>
+<p>Below is a list of common Gotchas to be aware of for common scam practices and ways to be safe:</p>
+<details>
+<Summary>Free Giveaways/Promotion</Summary>
+<p><em>&quot;If it is looks too good to be true, it probably is&quot;</em></p>
+<p>Often users get pulled into promotional scams promising great returns. Beware of such promotions, there are no free moneys to simply grab online.
+This is a very common scamming method targetted towards users who are new to the digital financial ecosystem.</p>
+<p>While the above is true for any platform, telegram is one of the most commonly exploited avenues for such scam operations. if you get added to such a group, please <a href="https://t.me/CardanoReportToAdmin">inform officials</a>, and click the &quot;Report Spam and Leave&quot; option. Usually you would often also see a lot of users responding with confirmations to those Giveaway scams - these are mostly bot accounts, do not fall for them.
+Checkout a typical giveaway scam and fake user responses below:</p>
+<p><img src="https://raw.githubusercontent.com/cardano-community/support-faq/images/docs/images/giveaway-scam1.jpg" alt="Giveaway Scams" /><img src="https://raw.githubusercontent.com/cardano-community/support-faq/images/docs/images/giveaway-scam2.jpg" alt="Fake bots confirming scams" /></p>
+</details>
+<details>
+<Summary>Receiving DM from someone impersonating admins/ambassadors</Summary>
+<p>One other common scamming practice you often see on telegram is accounts trying to impersonate official accounts or personnels (admins/ambassadors).</p>
+<p><strong>As an alert, be sure that none of the official admins/ambassadors will message you directly.</strong></p>
+<p>These types of scams are pretty easy to identify yourself if you pay attention to details:</p>
+<ul>
+<li>You would often notice you do not share common groups with the scammers. The moderators from the official channels are diligent and actively try to keep impersonators at bay. But there are often proxy accounts hidden in groups which share and allow impersonating accounts to message users.<br />
+<img src="https://raw.githubusercontent.com/cardano-community/support-faq/images/docs/images/tg-impersonator-check-1.jpg" alt="Check Common groups" /></li>
+<li>They may mask the usernames to be similar (eg: <code>rd1rt</code> instead of <code>rdlrt</code>) or they may hide Username and add <code>@rdlrt</code> text to Bio instead. Please be on the lookout for such methods and verify Username <em>as well as</em> Bio when chatting with anyone in DMs.<br />
+<img src="https://raw.githubusercontent.com/cardano-community/support-faq/images/docs/images/tg-impersonator-check-2.jpg" alt="Check Username and Bio" /></li>
+</ul>
+</details>
+<details>
+<Summary>Being added to a random group/channel(s)</Summary>
+<p>Very often telegram users are added to a scam group that looks legit (see screenshot below). The content of the group may be promotional as above or try to push in a scam link within group of correct ones. If you're not sure if you jo
+ined that group, please cross-check the list of <a href="https://t.me/Cardano/271989">community groups on telegram</a>.</p>
+<p><img src="https://raw.githubusercontent.com/cardano-community/support-faq/images/docs/images/random-impersonating-groups.jpg" alt="Random Impersonating groups" /></p>
+<p>To prevent getting added to such groups, please ensure your user settings in telegram is updated as below:</p>
+<p><img src="https://raw.githubusercontent.com/cardano-community/support-faq/images/docs/images/tg-privacy-settings-1.jpg" alt="Telegram Settings" />
+<img src="https://raw.githubusercontent.com/cardano-community/support-faq/images/docs/images/tg-privacy-settings-2.jpg" alt="Telegram Privacy Settings" />
+<img src="https://raw.githubusercontent.com/cardano-community/support-faq/images/docs/images/tg-privacy-settings-3.jpg" alt="Telegram Allow adding to groups Settings" /></p>
+</details>
+<details>
+<Summary>Receiving DM from unknown users</Summary>
+<p>One of the more common and amateur scam attempts would be scammers with fake user profiles (often using a model or an investor's photo in profile) will message you directly, and after a friendly conversation ask you either for assistance with stuck funds (asking you to share some funds to unlock theirs) or giving investment expert recommendations (often to a scam exchange/website). Simply forward the message to the admin group mentioned earlier, and report such users to telegram as spam. Few examples of such scam conversations below:</p>
+<p><img src="https://raw.githubusercontent.com/cardano-community/support-faq/images/docs/images/tg-random-dm-1.jpg" alt="Telegram Random DMs" />
+<img src="https://raw.githubusercontent.com/cardano-community/support-faq/images/docs/images/tg-random-dm-2.jpg" alt="Telegram Random DMs" /></p>
+</details>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="explorers.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="explorers.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+        <script src="ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
