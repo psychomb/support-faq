@@ -211,24 +211,19 @@ When querying funds, if you're looking at value of an address - you may not see 
 Thus, best way to query your funds is using your wallet software , which had access to your keys. While to look at whether funds have reached to address B, explorer comes in handy.</p>
 <p>For further details, you can read the excellent <a href="https://emurgo.io/en/blog/blockchain-primer-cardanos-utxo-model-simply-explained">blog from Emurgo</a> which goes into moredetails about UTXO model.</p>
 <h2><a class="header" href="#types-of-wallets" id="types-of-wallets">Types of Wallets</a></h2>
+<p>Now that you have familiarised with what wallet is technically, lets explore the types of wallets you can use. Please navigate as per below to explore specific type of wallet.</p>
 <ul>
-<li><a href="Wallets/types.html#hardware-wallets">Hardware Wallets</a></li>
 <li><a href="Wallets/types.html#software-wallets">Software Wallets</a>
 <ul>
 <li><a href="Wallets/types.html#full-node-wallet">Full-Node Wallets</a></li>
 <li><a href="Wallets/types.html#light-wallet">Light Wallets</a></li>
 </ul>
 </li>
+<li><a href="Wallets/types.html#hardware-wallets">Hardware Wallets</a></li>
 </ul>
 <p>To summarise from end user's point of view, there are primarily two types of wallet:</p>
-<h3><a class="header" href="#hardware-wallets" id="hardware-wallets">Hardware Wallets:</a></h3>
-<blockquote>
-<p>TODO</p>
-</blockquote>
 <h3><a class="header" href="#software-wallets" id="software-wallets">Software Wallets:</a></h3>
-<blockquote>
-<p>TODO</p>
-</blockquote>
+<p>A software wallet is a digital wallet interface where the cryptographic keys (encrypted) will be stored on the device you're using. Within software wallets, there are mainly two types of wallets as noted below.</p>
 <h4><a class="header" href="#full-node-wallet" id="full-node-wallet">Full node wallet:</a></h4>
 <p>A full node wallet runs a complete independent blockchain node and provides capability to operate your wallet by querying the node. An example of such a wallet is Daedalus. There are a few advantages of running such a node:</p>
 <ul>
@@ -244,22 +239,33 @@ Thus, best way to query your funds is using your wallet software , which had acc
 <li>Full node wallets may not be considered ideal for portable/handheld devices.</li>
 </ul>
 <h4><a class="header" href="#light-wallet" id="light-wallet">Light wallet:</a></h4>
-<p>A light wallet is a light-weight interface that connects to a remote node for operations.</p>
+<p>A light wallet is a light-weight interface that connects to a remote node for operations - thus, relieving you of the responsibility to operate a full blockchain node. An example of such a wallet is Yoroi. Advantages of using light wallet:</p>
+<ul>
+<li>You do not need to wait for entire blockchain to be synched on your device to start performing operations, as you connect to an already running up-to-date node via your wallet.</li>
+<li>You remain in control of your keys. A common misperception with light wallets is that it is unsafe because your keys are sent over network. Most professional light wallets will ensure that your keys never leave your device, and are always in encrypted state even on your device. To this point, this shouldnt really be a differentiator for you to select between a full node wallet v/s light wallet, they're <em>both as safe as your device.</em></li>
+<li>You do not need to worry about performing blockchain node upgrades, as this can be done on the server end.</li>
+<li>Light wallets can be integrated easily on portable/handle devices.</li>
+<li>They're typically very lightweight, and do not have high storage/memory or stable network requirements.</li>
+</ul>
 <p>For official links about the comparison, kindly visit <a href="https://iohk.zendesk.com/hc/en-us/articles/360026058573-Daedalus-wallet-compared-to-Yoroi-wallet">this support article</a> from IOHK.</p>
+<h3><a class="header" href="#hardware-wallets" id="hardware-wallets">Hardware Wallets:</a></h3>
+<blockquote>
+<p>TODO</p>
+</blockquote>
 <h2><a class="header" href="#list-of-wallets" id="list-of-wallets">List of Wallets</a></h2>
 <p>The following is a list of wallets that are well-known to support Cardano.
 Note that in case of issues, usually only queries relating to official wallets can be answered in official Cardano groups across telegram/forum.
 You may need to consult with specific wallet support teams for third party wallets.</p>
 <table><thead><tr><th>Wallet Name</th><th>Type</th><th>Hardware Wallet support</th><th>Open Source</th><th>Platform</th><th>Staking Support</th><th>Official</th><th>User owns Keys</th><th>Keys compatible?**</th></tr></thead><tbody>
-<tr><td><a href="Wallets/./daedalus.html">Daedalus</a></td><td>Full Node</td><td>No, soon</td><td><a href="https://github.com/input-output-hk/daedalus">Yes</a></td><td>Windows, MacOS, Linux</td><td>Yes</td><td>Yes (<a href="https://iohk.io">IOHK</a>)</td><td>Yes</td><td>Yes</td></tr>
-<tr><td><a href="Wallets/./yoroi.html">Yoroi</a></td><td>Light</td><td>Yes (Ledger Nano S/X), Trezor Model T</td><td><a href="https://github.com/emurgo/yoroi-frontend">Yes</a></td><td>Chrome Extension, Firefox Add-on, Android, IPhone</td><td>Yes</td><td>Yes (<a href="https://emurgo.io">Emurgo</a>)</td><td>Yes</td><td>Yes</td></tr>
-<tr><td><a href="https://www.adalite.io">Adalite</a></td><td>Light</td><td>Yes (Ledger Nano S/X), Trezor Model T</td><td><a href="https://github.com/vacuumlabs/adalite">Yes</a></td><td>Web</td><td>Yes</td><td>No</td><td>Yes</td><td>Yes</td></tr>
-<tr><td><a href="https://adawallet.io/">Medusa</a></td><td>Light</td><td>No</td><td>No</td><td>Web</td><td>Yes</td><td>No</td><td>Yes</td><td>Yes</td></tr>
-<tr><td><a href="https://atomicwallet.io/">Atomic</a></td><td>Light</td><td>No</td><td><a href="https://github.com/Atomicwallet">Partially</a></td><td>Windows, MacOS, Linux, Android, IPhone</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td></tr>
-<tr><td><a href="https://magnumwallet.co/">Magnum</a></td><td>Light</td><td>Yes (Ledger Nano S/X), Trezor Model T</td><td><a href="https://github.com/magnumwallet">Yes</a></td><td>Web</td><td>No</td><td>No</td><td>Yes</td><td>Only for Hardware Wallets</td></tr>
-<tr><td><a href="https://www.ethos.io/universal-wallet/">Ethos</a></td><td>Light</td><td>No</td><td><strong><a href="https://github.com/ethos-source">No</a></strong></td><td>Android, IPhone</td><td>No</td><td>No</td><td>Yes</td><td><strong>No</strong></td></tr>
-<tr><td><a href="https://www.exodus.io/">Exodus</a></td><td>Light</td><td>No</td><td><a href="https://github.com/exodusmovement">Partially</a></td><td>Windows, MacOS, Linux, Android, IPhone</td><td>No</td><td>No</td><td>Yes</td><td><strong>No</strong></td></tr>
-<tr><td><a href="https://www.infinitowallet.io">Infinito</a></td><td>Light</td><td>No</td><td><a href="https://github.com/infinityblockchainlabs">Yes</a></td><td>Android, Iphone</td><td>No</td><td>No</td><td>Yes</td><td><strong>No</strong></td></tr>
+<tr><td><a href="Wallets/./daedalus.html">Daedalus</a></td><td><a href="Wallets/types.html#full-node-wallet">Full Node</a></td><td>No, soon</td><td><a href="https://github.com/input-output-hk/daedalus">Yes</a></td><td>Windows, MacOS, Linux</td><td>Yes</td><td>Yes (<a href="https://iohk.io">IOHK</a>)</td><td>Yes</td><td>Yes</td></tr>
+<tr><td><a href="Wallets/./yoroi.html">Yoroi</a></td><td><a href="Wallets/types.html#light-wallet">Light</a></td><td>Yes (Ledger Nano S/X), Trezor Model T</td><td><a href="https://github.com/emurgo/yoroi-frontend">Yes</a></td><td>Chrome Extension, Firefox Add-on, Android, IPhone</td><td>Yes</td><td>Yes (<a href="https://emurgo.io">Emurgo</a>)</td><td>Yes</td><td>Yes</td></tr>
+<tr><td><a href="https://www.adalite.io">Adalite</a></td><td><a href="Wallets/types.html#light-wallet">Light</a></td><td>Yes (Ledger Nano S/X), Trezor Model T</td><td><a href="https://github.com/vacuumlabs/adalite">Yes</a></td><td>Web</td><td>Yes</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+<tr><td><a href="https://adawallet.io/">Medusa</a></td><td><a href="Wallets/types.html#light-wallet">Light</a></td><td>No</td><td>No</td><td>Web</td><td>Yes</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+<tr><td><a href="https://atomicwallet.io/">Atomic</a></td><td><a href="Wallets/types.html#light-wallet">Light</a></td><td>No</td><td><a href="https://github.com/Atomicwallet">Partially</a></td><td>Windows, MacOS, Linux, Android, IPhone</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+<tr><td><a href="https://magnumwallet.co/">Magnum</a></td><td><a href="Wallets/types.html#light-wallet">Light</a></td><td>Yes (Ledger Nano S/X), Trezor Model T</td><td><a href="https://github.com/magnumwallet">Yes</a></td><td>Web</td><td>No</td><td>No</td><td>Yes</td><td>Only for Hardware Wallets</td></tr>
+<tr><td><a href="https://www.ethos.io/universal-wallet/">Ethos</a></td><td><a href="Wallets/types.html#light-wallet">Light</a></td><td>No</td><td><strong><a href="https://github.com/ethos-source">No</a></strong></td><td>Android, IPhone</td><td>No</td><td>No</td><td>Yes</td><td><strong>No</strong></td></tr>
+<tr><td><a href="https://www.exodus.io/">Exodus</a></td><td><a href="Wallets/types.html#light-wallet">Light</a></td><td>No</td><td><a href="https://github.com/exodusmovement">Partially</a></td><td>Windows, MacOS, Linux, Android, IPhone</td><td>No</td><td>No</td><td>Yes</td><td><strong>No</strong></td></tr>
+<tr><td><a href="https://www.infinitowallet.io">Infinito</a></td><td><a href="Wallets/types.html#light-wallet">Light</a></td><td>No</td><td><a href="https://github.com/infinityblockchainlabs">Yes</a></td><td>Android, Iphone</td><td>No</td><td>No</td><td>Yes</td><td><strong>No</strong></td></tr>
 </tbody></table>
 <h1><a class="header" href="#yoroi" id="yoroi">Yoroi</a></h1>
 <h2><a class="header" href="#how-to-installuninstall-yoroi" id="how-to-installuninstall-yoroi">How to Install/Uninstall Yoroi</a></h2>
@@ -361,13 +367,17 @@ Timestamp<br />
 Block producing node identifier</p>
 <p>Some explorers provide additional tools and information, such as API support, a list of the largest addresses by ada balance, and graphical visualisations of the blockchain's network activity.</p>
 <h3><a class="header" href="#list-of-explorers-1" id="list-of-explorers-1">List of Explorers</a></h3>
-<table><thead><tr><th>Name</th><th>Official</th><th>Stakepool info</th><th>API Support</th><th>Direct URLs</th><th>Rich List</th></tr></thead><tbody>
+<table><thead><tr><th>Name</th><th>Official</th><th>Stakepool info**</th><th>API Support</th><th>Direct URLs</th><th>Rich List</th></tr></thead><tbody>
 <tr><td><a href="https://explorer.cardano.org">Cardano Explorer</a></td><td>Yes (<a href="https://iohk.io">IOHK</a>)</td><td>Soon</td><td>No</td><td>Yes</td><td>No</td></tr>
 <tr><td><a href="https://seiza.com">Seiza</a></td><td>Yes (<a href="https://emurgo.io">Emurgo</a>)</td><td>Soon</td><td>No</td><td>Yes</td><td>No</td></tr>
 <tr><td><a href="http://adascan.net/">ADAScan</a></td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td></tr>
-<tr><td><a href="https://adaex.org/">ADAEx</a></td><td>No</td><td>No</td><td></td><td>No</td><td>Yes</td></tr>
-<tr><td><a href="https://adastat.net">ADAStat</a></td><td>No</td><td>No</td><td>No</td><td>Soon</td><td>Yes</td></tr>
+<tr><td><a href="https://adaex.org/">ADAEx</a></td><td>No</td><td>Soon</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+<tr><td><a href="https://adastat.net">ADAStat*</a></td><td>No</td><td>Soon</td><td>Soon</td><td>Yes</td><td>Yes</td></tr>
+<tr><td><a href="https://clio.one/">Clio.One</a></td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>No</td></tr>
+<tr><td><a href="https://blockchair.com/cardano">BlockChair</a></td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>No</td></tr>
 </tbody></table>
+<p><em>*Currently on ITN, soon on Mainnet</em><br />
+<em>**Staking on mainnet will only be available after 3rd August</em></p>
 <h2><a class="header" href="#how-to-identify-a-scam" id="how-to-identify-a-scam">How to identify a SCAM</a></h2>
 <p>We commonly come across users losing their moneys to various giveaways or impersonators. Being in a decentralised cryptocurrency means you as an individual are your own bank, and only you are responsible for protecting your funds.
 If you fall for any of these and you giveaway funds or share your private keys, <strong>nobody</strong> can recover your funds. Do your due diligence when operating your crypto, just as you would when operating fiat currency notes.
