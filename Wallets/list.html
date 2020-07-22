@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="shortcut icon" href="../">
         <link rel="stylesheet" href="../css/variables.css">
         <link rel="stylesheet" href="../css/general.css">
         <link rel="stylesheet" href="../css/chrome.css">
@@ -36,7 +36,7 @@
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "../";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "ayu";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "ayu";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -158,14 +158,15 @@ You may need to consult with specific wallet support teams for third party walle
 <table><thead><tr><th>Wallet Name</th><th>Type</th><th>Hardware Wallet support</th><th>Open Source</th><th>Platform</th><th>Staking Support</th><th>Official</th><th>User owns Keys</th><th>Keys compatible?**</th></tr></thead><tbody>
 <tr><td><a href="./daedalus.html">Daedalus</a></td><td><a href="types.html#full-node-wallet">Full Node</a></td><td>No, soon</td><td><a href="https://github.com/input-output-hk/daedalus">Yes</a></td><td>Windows, MacOS, Linux</td><td>Yes</td><td>Yes (<a href="https://iohk.io">IOHK</a>)</td><td>Yes</td><td>Yes</td></tr>
 <tr><td><a href="./yoroi.html">Yoroi</a></td><td><a href="types.html#light-wallet">Light</a></td><td>Yes (Ledger Nano S/X), Trezor Model T</td><td><a href="https://github.com/emurgo/yoroi-frontend">Yes</a></td><td>Chrome Extension, Firefox Add-on, Android, IPhone</td><td>Yes</td><td>Yes (<a href="https://emurgo.io">Emurgo</a>)</td><td>Yes</td><td>Yes</td></tr>
-<tr><td><a href="https://www.adalite.io">Adalite</a></td><td><a href="types.html#light-wallet">Light</a></td><td>Yes (Ledger Nano S/X), Trezor Model T</td><td><a href="https://github.com/vacuumlabs/adalite">Yes</a></td><td>Web</td><td>Yes</td><td>No</td><td>Yes</td><td>Yes</td></tr>
-<tr><td><a href="https://adawallet.io/">Medusa</a></td><td><a href="types.html#light-wallet">Light</a></td><td>No</td><td>No</td><td>Web</td><td>Yes</td><td>No</td><td>Yes</td><td>Yes</td></tr>
-<tr><td><a href="https://atomicwallet.io/">Atomic</a></td><td><a href="types.html#light-wallet">Light</a></td><td>No</td><td><a href="https://github.com/Atomicwallet">Partially</a></td><td>Windows, MacOS, Linux, Android, IPhone</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+<tr><td><a href="https://www.adalite.io">Adalite</a></td><td><a href="types.html#light-wallet">Light</a></td><td>Yes (Ledger Nano S/X), Trezor Model T</td><td><a href="https://github.com/vacuumlabs/adalite">Yes</a></td><td><strong>Web</strong></td><td>Yes</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+<tr><td><a href="https://adawallet.io/">Medusa</a></td><td><a href="types.html#light-wallet">Light</a></td><td>No</td><td><strong>No</strong></td><td><strong>Web</strong></td><td>Yes</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+<tr><td><a href="https://atomicwallet.io/">Atomic</a></td><td><a href="types.html#light-wallet">Light</a></td><td><strong>No</strong></td><td><strong><a href="https://github.com/Atomicwallet">Partially</a></strong></td><td>Windows, MacOS, Linux, Android, IPhone</td><td>Soon</td><td>No</td><td>Yes</td><td><strong>No</strong></td></tr>
 <tr><td><a href="https://magnumwallet.co/">Magnum</a></td><td><a href="types.html#light-wallet">Light</a></td><td>Yes (Ledger Nano S/X), Trezor Model T</td><td><a href="https://github.com/magnumwallet">Yes</a></td><td>Web</td><td>No</td><td>No</td><td>Yes</td><td>Only for Hardware Wallets</td></tr>
 <tr><td><a href="https://www.ethos.io/universal-wallet/">Ethos</a></td><td><a href="types.html#light-wallet">Light</a></td><td>No</td><td><strong><a href="https://github.com/ethos-source">No</a></strong></td><td>Android, IPhone</td><td>No</td><td>No</td><td>Yes</td><td><strong>No</strong></td></tr>
 <tr><td><a href="https://www.exodus.io/">Exodus</a></td><td><a href="types.html#light-wallet">Light</a></td><td>No</td><td><a href="https://github.com/exodusmovement">Partially</a></td><td>Windows, MacOS, Linux, Android, IPhone</td><td>No</td><td>No</td><td>Yes</td><td><strong>No</strong></td></tr>
 <tr><td><a href="https://www.infinitowallet.io">Infinito</a></td><td><a href="types.html#light-wallet">Light</a></td><td>No</td><td><a href="https://github.com/infinityblockchainlabs">Yes</a></td><td>Android, Iphone</td><td>No</td><td>No</td><td>Yes</td><td><strong>No</strong></td></tr>
 </tbody></table>
+<p>**Keys compatible : Whether you can use the wallet in other wallets, if the relevant one goes down?</p>
 
                     </main>
 
@@ -211,17 +212,7 @@ You may need to consult with specific wallet support teams for third party walle
         
         
         
-        <script type="text/javascript">
-            window.playpen_copyable = true;
-        </script>
-        
 
-        
-        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
         
 
         
